@@ -1,40 +1,35 @@
 #!/usr/bin/env cwl-runner
 
-class: CommandLineTool
+class: Workflow
+description: "Megagenomic de novo Sequencing"
 
 requirements:
   - class: DockerRequirement
     dockerImageId: 'dukegcb/genovo'
-  - class: CreateFileRequirement
-    description: 'Symlinks the input file into the output directory because genovo insists on writing files alongside the input directory'
-    fileDef:
-      - filename: 'dumpfile.dump'
-        fileContent:
-          engine: "cwl:JsonPointer"
-          script: "job/reads"
-
-description: "Megagenomic de novo Sequencing"
 
 inputs:
-  - id: "#reads"
+  - id: "#input"
     type: File
-    inputBinding:
-      position: 1
+    description: "FASTA file containing reads to assemble"
   - id: "#assemble_iterations"
     type: int
     default: 1
-    inputBinding:
-      position: 2
+    description: "The number of iterations to run when assembling"
+  - id: "#finalize_cutoff"
+    type: int
+    default: 250
+    description: "The minimum length to use when outputting assembled contigs"
 
 outputs:
-  - id: "#log_file"
+  - id: "#output"
     type: File
-    outputBinding:
-      glob: log.txt
-  - id: "#dump_file"
-    type: File
-    outputBinding:
-      glob: '*.dump.best'
+    description: "Results file, to contain contigs"
+    source: "#assemble.log"
 
-baseCommand: assemble
-stdout: log.txt
+steps:
+  - inputs:
+    - { id: "#assemble.input", source: "#input" }
+    - { id: "#assemble.iterations", source: "#assemble_iterations" }
+    outputs:
+    - { id: "#assemble.log" }
+    run: { import: assembletool.cwl }

@@ -1,6 +1,10 @@
 {
-  "reads": {
+  "input": {
     "class": "File",
     "path": "/Users/dcl9/Data/mmap/example/MMAP_example.fasta"
+  },
+  "output": {
+    "class": "File",
+    "path": "genovo.log"
   }
 }
