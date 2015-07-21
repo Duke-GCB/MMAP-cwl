@@ -5,6 +5,13 @@ class: CommandLineTool
 requirements:
   - class: DockerRequirement
     dockerImageId: 'dukegcb/genovo'
+  - class: CreateFileRequirement
+    description: 'Symlinks the input file into the output directory because genovo insists on writing files alongside the input directory'
+    fileDef:
+      - filename: 'dumpfile.dump'
+        fileContent:
+          engine: "cwl:JsonPointer"
+          script: "job/reads"
 
 description: "Megagenomic de novo Sequencing"
 
