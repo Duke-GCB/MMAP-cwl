@@ -35,7 +35,7 @@ outputs:
   - id: "#log"
     type: File
     outputBinding:
-      glob: log.txt
+      glob: finalize.txt
   - id: "#contigs_file"
     type: File
     outputBinding:
@@ -44,7 +44,4 @@ outputs:
         script: /job/contigs_file_name
 
 baseCommand: finalize
-stdout:
-  glob:
-    engine: cwl:JsonPointer
-    script: /job/log_file
+stdout: finalize.txt

@@ -31,14 +31,11 @@ outputs:
   - id: "#log"
     type: File
     outputBinding:
-      glob: log.txt
+      glob: assemble.txt
   - id: "#dump_file"
     type: File
     outputBinding:
       glob: 'fasta_file_symlinked.fasta.dump.best'
 
 baseCommand: assemble
-stdout:
-  glob:
-    engine: cwl:JsonPointer
-    script: /job/log_file
+stdout: assemble.txt
