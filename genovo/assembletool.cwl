@@ -8,17 +8,17 @@ requirements:
   - class: CreateFileRequirement
     description: 'Symlinks the input file into the output directory because genovo insists on writing files alongside the input directory'
     fileDef:
-      - filename: 'genovo-input-symlinked.fasta'
+      - filename: 'fasta_file_symlinked.fasta'
         fileContent:
           engine: "cwl:JsonPointer"
-          script: "job/input"
+          script: "job/fasta_file"
 
 inputs:
-  - id: "#input"
+  - id: "#fasta_file"
     type: File
-  - id: "#input-symlinked"
+  - id: "#fasta_file_symlinked"
     type: string
-    default: 'genovo-input-symlinked.fasta'
+    default: 'fasta_file_symlinked.fasta'
     inputBinding:
       position: 1
   - id: "#iterations"
@@ -32,10 +32,10 @@ outputs:
     type: File
     outputBinding:
       glob: log.txt
-  - id: "#dump"
+  - id: "#dump_file"
     type: File
     outputBinding:
-      glob: 'genovo-input-symlinked.fasta.dump.best'
+      glob: 'fasta_file_symlinked.fasta.dump.best'
 
 baseCommand: assemble
 stdout: log.txt
