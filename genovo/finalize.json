@@ -1,0 +1,11 @@
+{
+  "dump_file": {
+    "path": "fasta_file_symlinked.fasta.dump.best",
+    "class": "File"
+  },
+  "contigs_file_name" : "mmap.contigs",
+  "log_file": {
+    "class": "File",
+    "path": "finalize.log"
+  }
+}
