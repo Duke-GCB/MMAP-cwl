@@ -44,4 +44,7 @@ outputs:
         script: /job/contigs_file_name
 
 baseCommand: finalize
-stdout: log.txt
+stdout:
+  glob:
+    engine: cwl:JsonPointer
+    script: /job/log_file

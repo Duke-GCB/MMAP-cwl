@@ -38,4 +38,7 @@ outputs:
       glob: 'fasta_file_symlinked.fasta.dump.best'
 
 baseCommand: assemble
-stdout: log.txt
+stdout:
+  glob:
+    engine: cwl:JsonPointer
+    script: /job/log_file
