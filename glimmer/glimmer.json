@@ -1,0 +1,11 @@
+{
+  "input_contigs_file": {
+    "class": "File",
+    "path": "/Users/dcl9/Code/python/mmap-cwl/genovo/cwl-contigs.out"
+  },
+  "output_orfs_file_name": "cwl-orfs.out",
+  "log_file": {
+    "class": "File",
+    "path": "genovo.log"
+  }
+}
