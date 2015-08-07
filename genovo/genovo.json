@@ -3,6 +3,7 @@
     "class": "File",
     "path": "/Users/dcl9/Data/mmap/example/MMAP_example.fasta"
   },
+  "output_contigs_file_name": "cwl-contigs.out",
   "log_file": {
     "class": "File",
     "path": "genovo.log"

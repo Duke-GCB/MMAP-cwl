@@ -18,13 +18,12 @@ inputs:
   - id: "#output_contigs_file_name"
     type: string
     description: "The name of the results file to contain contigs after assembly"
-    default: "contigs.out"
 
 outputs:
   - id: "#output_contigs_file"
     type: File
     description: "Results file, to contain contigs"
-    source: "#assemble.dump_file"
+    source: "#finalize.contigs_file"
 
 steps:
   - id: "#assemble"
@@ -34,12 +33,12 @@ steps:
     - { id: "#assemble.iterations", source: "#assemble_iterations" }
     outputs:
     - { id: "#assemble.dump_file" }
-#   - id: "#finalize"
-#     run: { import: finalizetool.cwl }
-#     inputs:
-#     - { id: "#finalize.dump_file", source: "#assemble.dump_file" }
-#     - { id: "#finalize.cutoff", source: "#finalize_cutoff" }
-#     - { id: "#finalize.contigs_file_name", source: "#output_contigs_file_name" }
-#     outputs:
-#     - { id: "#finalize.contigs_file" }
+  - id: "#finalize"
+    run: { import: finalizetool.cwl }
+    inputs:
+    - { id: "#finalize.dump_file", source: "#assemble.dump_file" }
+    - { id: "#finalize.cutoff", source: "#finalize_cutoff" }
+    - { id: "#finalize.contigs_file_name", source: "#output_contigs_file_name" }
+    outputs:
+    - { id: "#finalize.contigs_file" }
 
