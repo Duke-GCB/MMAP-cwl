@@ -18,7 +18,6 @@ inputs:
     default: 'goterms.csv'
     inputBinding:
       position: 2
-      prefix: -out
 outputs:
   - id: "#goterms_csv_file"
     type: File
@@ -27,4 +26,4 @@ outputs:
         engine: "cwl:JsonPointer"
         script: "job/goterms_csv_file_name"
 
-baseCommand: extract-go-terms-cli.py
+baseCommand: extract_go_terms-cli.py
