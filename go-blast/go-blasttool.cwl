@@ -62,5 +62,4 @@ outputs:
         engine: "cwl:JsonPointer"
         script: "job/results_file_name"
 
-
 baseCommand: blastx
