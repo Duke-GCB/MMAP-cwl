@@ -17,6 +17,7 @@ inputs:
     description: "The minimum length to use when outputting assembled contigs"
   - id: "#output_contigs_file_name"
     type: string
+    default: "mmap-contigs.fasta"
     description: "The name of the results file to contain contigs after assembly"
 
 outputs:

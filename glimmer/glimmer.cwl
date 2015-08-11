@@ -10,6 +10,7 @@ inputs:
   - id: "#output_orfs_file_name"
     type: string
     description: "The name of the results file to contain ORFs after "
+    default: "mmap-orfs.orfs"
 
 outputs:
   - id: "#output_orfs_file"

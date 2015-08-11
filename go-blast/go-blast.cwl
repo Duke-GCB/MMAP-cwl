@@ -16,6 +16,7 @@ inputs:
   - id: "#output_goterms_file_name"
     type: string
     description: "The name of the results file containing GO terms extracted"
+    default: "mmap-goterms.csv"
 outputs:
   - id: "#output_goterms_file"
     type: File
