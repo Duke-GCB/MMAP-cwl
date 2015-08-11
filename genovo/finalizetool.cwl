@@ -32,10 +32,6 @@ inputs:
       position: 3
 
 outputs:
-  - id: "#log"
-    type: File
-    outputBinding:
-      glob: finalize.txt
   - id: "#contigs_file"
     type: File
     outputBinding:
@@ -44,4 +40,3 @@ outputs:
         script: /job/contigs_file_name
 
 baseCommand: finalize
-stdout: finalize.txt

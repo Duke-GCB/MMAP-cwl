@@ -28,14 +28,9 @@ inputs:
       position: 2
 
 outputs:
-  - id: "#log"
-    type: File
-    outputBinding:
-      glob: assemble.txt
   - id: "#dump_file"
     type: File
     outputBinding:
       glob: 'fasta_file_symlinked.fasta.dump.best'
 
 baseCommand: assemble
-stdout: assemble.txt
