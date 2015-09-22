@@ -2,9 +2,11 @@
 
 class: CommandLineTool
 
-requirements:
+hints:
   - class: DockerRequirement
     dockerImageId: 'dukegcb/genovo'
+
+requirements:
   - class: CreateFileRequirement
     description: 'Symlinks the input file into the output directory because genovo insists on writing files alongside the input directory'
     fileDef:

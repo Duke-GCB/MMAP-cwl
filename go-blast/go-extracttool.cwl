@@ -2,7 +2,7 @@
 
 class: CommandLineTool
 
-requirements:
+hints:
   - class: DockerRequirement
     dockerImageId: 'dukegcb/extract-go-terms'
 

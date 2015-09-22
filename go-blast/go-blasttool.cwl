@@ -2,10 +2,12 @@
 
 class: CommandLineTool
 
-requirements:
+hints:
   - class: DockerRequirement
     dockerImageId: 'dukegcb/go-blast'
-  - import: node-engine.cwl
+
+requirements:
+  - import: ../py-expr-engine/py-expr-engine.cwl
 
 inputs:
   - id: "#db_name"
@@ -18,10 +20,9 @@ inputs:
       position: 1
       prefix: -db
       valueFrom:
-        engine: "node-engine.cwl"
+        engine: ../py-expr-engine/py-expr-engine.cwl
         script: |
-          { return {"path": $self.path + '/' + $job.db_name, "class": "File"}; }
-
+          { 'path': self.path + '/' + job.db_name, 'class' : 'File' }
   - id: "#query"
     type: File
     description: 'Input file containing sequences to query'
