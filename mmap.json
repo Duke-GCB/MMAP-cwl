@@ -1,12 +1,12 @@
 {
   "input_fasta_file": {
     "class": "File",
-    "path": "/Users/dcl9/Data/mmap/example/MMAP_example.fasta"
+    "path": "/Users/dcl9/Downloads/mgm4589537.3.050.upload.fastq"
   },
   "blast_db_dir": {
     "class": "File",
     "path": "/Users/dcl9/Data/go-blastdb"
   },
   "blast_db_name": "go-seqdb",
-  "output_goterms_file_name": "cwl-goterms.csv"
+  "output_goterms_file_name": "mgm4589537.3.050.csv"
 }
