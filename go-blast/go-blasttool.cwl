@@ -16,13 +16,16 @@ inputs:
   - id: "#db_dir"
     type: File
     description: 'Directory containing the BLAST database'
+  - id: "#db"
+    type: string
+    default: ""
     inputBinding:
       position: 1
       prefix: -db
       valueFrom:
         engine: ../py-expr-engine/py-expr-engine.cwl
         script: |
-          { 'path': job.db_dir.path + '/' + job.db_name, 'class' : 'File' }
+          os.path.join(self.job['db_dir']['path'], self.job['db_name'])
   - id: "#query"
     type: File
     description: 'Input file containing sequences to query'
