@@ -19,7 +19,7 @@ export PATH="$BASEPATH/glimmer3.02/scripts:$PATH"
 # extract
 export PATH="$BASEPATH/glimmer3.02/bin:$PATH"
 # number_orfs.py
-export PATH="$BASEPATH/mmap-bin:$PATH"
+export PATH="$BASEPATH:$PATH"
 
 ## BLAST
 # blastx
