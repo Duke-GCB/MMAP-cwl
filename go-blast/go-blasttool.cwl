@@ -22,7 +22,7 @@ inputs:
       valueFrom:
         engine: ../py-expr-engine/py-expr-engine.cwl
         script: |
-          { 'path': self.path + '/' + job.db_name, 'class' : 'File' }
+          { 'path': job.db_dir.path + '/' + job.db_name, 'class' : 'File' }
   - id: "#query"
     type: File
     description: 'Input file containing sequences to query'
