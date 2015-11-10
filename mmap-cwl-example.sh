@@ -32,6 +32,7 @@ source ~/env-cwl/bin/activate
 
 srun cwltool --preserve-environment PATH \
   --no-container \
-  --outdir /home/dcl9/mmap-cwl-data/output \
-  /home/dcl9/mmap-cwl/mmap-align.cwl \
-  /home/dcl9/mmap-cwl-data/input/mgm4589537.3.050.json
+  --outdir /home/dcl9/mmap-cwl-data/example/output \
+  /home/dcl9/mmap-cwl/mmap.cwl \
+  /home/dcl9/mmap-cwl-data/example/input/MMAP_example.json
+
