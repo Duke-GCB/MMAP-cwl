@@ -19,7 +19,15 @@ inputs:
     type: string
     description: "CSV file containing the GO terms and occurrence counts"
 outputs:
-  - id: "#output_goterms_file"
+  - id: "#genovo_output_contigs_file"
+    type: File
+    description: "Contigs assembled by genovo"
+    source: "#genovo.output_contigs_file"
+  - id: "#glimmer_output_orfs_file"
+    type: File
+    description: "ORFS found by glimmer"
+    source: "#glimmer.output_orfs_file"
+  - id: "#blast_output_goterms_file"
     type: File
     description: "Results file"
     source: "#blast.output_goterms_file"
