@@ -2,7 +2,6 @@
 #
 #SBATCH --job-name=MMAP_cwl_array
 #SBATCH --output=MMAP_cwl_%A_%a.out
-#SBATCH --error=MMAP_cwl_%A_%a.out
 #SBATCH --mail-user=dan.leehr@duke.edu
 #SBATCH --mail-type=FAIL
 #SBATCH --mem=128000
