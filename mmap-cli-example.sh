@@ -11,7 +11,7 @@ INPUT_FILES=($INPUT_DIR/*.fasta)
 
 FASTA_FILE=${INPUT_FILES[0]}
 OUTPUT_BASE=$(basename $FASTA_FILE)
-OUTPUT_CSV_FILE= ${OUTPUT_BASE}.mmap_results.csv
+OUTPUT_CSV_FILE=${OUTPUT_BASE}.mmap_results.csv
 OUTPUT_DIR=/home/dcl9/mmap-cwl-data/example/output/${OUTPUT_BASE}
 mkdir -p $OUTPUT_DIR
 
