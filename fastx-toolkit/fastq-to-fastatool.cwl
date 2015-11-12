@@ -25,4 +25,4 @@ outputs:
         engine: "cwl:JsonPointer"
         script: "job/fasta_file_name"
 
-baseCommand: gunzipfastq_to_fasta
+baseCommand: fastq_to_fasta
