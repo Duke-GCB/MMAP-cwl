@@ -2,13 +2,10 @@
 
 class: CommandLineTool
 
-requirements:
-  - import: ../py-expr-engine/py-expr-engine.cwl
-
 inputs:
   - id: "#fastq_file"
     type: File
-    description: 'Input FASTQ file, may be compressed'
+    description: 'Input FASTQ file'
     inputBinding:
       position: 1
       prefix: -i
@@ -28,4 +25,4 @@ outputs:
         engine: "cwl:JsonPointer"
         script: "job/fasta_file_name"
 
-baseCommand: fastq_to_fasta
+baseCommand: gunzipfastq_to_fasta
