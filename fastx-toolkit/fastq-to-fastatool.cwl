@@ -15,7 +15,7 @@ inputs:
   - id: "#fasta_file_name"
     type: string
     default: "output.fasta"
-    description: 'Output FASTA file name"
+    description: 'Output FASTA file name'
     inputBinding:
       position: 2
       prefix: -o
