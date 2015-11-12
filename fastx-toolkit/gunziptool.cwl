@@ -16,5 +16,5 @@ outputs:
       glob:
         decompressed
 
-baseCommand: gunzip -c
+baseCommand: ["gunzip", "-c"]
 stdout: decompressed
