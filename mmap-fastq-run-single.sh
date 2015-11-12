@@ -37,7 +37,7 @@ cwltool --preserve-environment PATH \
   --no-container \
   --outdir $OUTPUT_DIR \
   /home/dcl9/mmap-cwl/mmap-fastq.cwl \
-  --input_fastq_file $FASTQ_FILE \
+  --input_fastq-gz_file $FASTQ_FILE \
   --blast_db_dir /home/dcl9/mmap-cwl-data/input/go-blastdb \
   --blast_db_name go-seqdb \
   --output_goterms_file_name $OUTPUT_FILE
