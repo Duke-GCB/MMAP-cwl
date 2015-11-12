@@ -6,9 +6,9 @@ requirements:
   - class: SubworkflowFeatureRequirement
 
 inputs:
-  - id: "#input_fastq_file"
+  - id: "#input_fastq-gz_file"
     type: File
-    description: "FASTQ file containing reads to assemble"
+    description: "FASTQ.gz file containing reads to assemble"
   - id: "#blast_db_dir"
     type: File
     description: 'Directory containing the BLAST database'
@@ -34,15 +34,15 @@ outputs:
 
 steps:
   - id: "#fastq_to_fasta"
-    run: { import: fastx-toolkit/fastq-to-fastatool.cwl }
+    run: { import: fastx-toolkit/fastq-gz-to-fasta.cwl }
     inputs:
-    - { id: "#fastq_to_fasta.fastq_file", source: "#input_fastq_file" }
+    - { id: "#fastq_to_fasta.input_fastq-gz_file", source: "#input_fastq-gz_file" }
     outputs:
-    - { id: "#fastq_to_fasta.fasta_file" }
+    - { id: "#fastq_to_fasta.output_fasta_file" }
   - id: "#genovo"
     run: { import: genovo/genovo.cwl }
     inputs:
-    - { id: "#genovo.input_fasta_file", source: "#fastq_to_fasta.fasta_file" }
+    - { id: "#genovo.input_fasta_file", source: "#fastq_to_fasta.output_fasta_file" }
     outputs:
     - { id: "#genovo.output_contigs_file" }
   - id: "#glimmer"
