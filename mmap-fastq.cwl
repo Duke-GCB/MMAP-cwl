@@ -34,7 +34,7 @@ outputs:
 
 steps:
   - id: "#fastq_to_fasta"
-    run: { import: fastx-toolkit/fastq_to-fastatool.cwl }
+    run: { import: fastx-toolkit/fastq-to-fastatool.cwl }
     inputs:
     - { id: "#fastq_to_fasta.fastq_file", source: "#input_fastq_file" }
     outputs:
