@@ -34,9 +34,9 @@ outputs:
 
 steps:
   - id: "#fastq_to_fasta"
-    run: { import: fastx-toolkit/fastq-gz-to-fasta.cwl }
+    run: { import: seqtk/seqtktool.cwl }
     inputs:
-    - { id: "#fastq_to_fasta.input_fastq-gz_file", source: "#input_fastq-gz_file" }
+    - { id: "#fastq_to_fasta.input_fastq_file", source: "#input_fastq-gz_file" }
     outputs:
     - { id: "#fastq_to_fasta.output_fasta_file" }
   - id: "#genovo"

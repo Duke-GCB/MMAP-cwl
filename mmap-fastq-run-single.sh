@@ -8,9 +8,8 @@ echo "Starting MMAP for $FASTQ_FILE, results in $OUTPUT_FILE"
 # All command-line binaries must be in PATH for CWL baseCommand to find them
 BASEPATH="/winhomes/dcl9/mmap-bin/"
 
-## fastx-toolkit
-# fastq_to_fasta
-export PATH="$BASEPATH/fastx_toolkit_0.0.13_binaries_Linux_2.6_amd64/bin:$PATH"
+## seqtk
+export PATH="$BASEPATH/seqtk/bin:$PATH"
 
 ## Genovo
 # assemble and finalize
