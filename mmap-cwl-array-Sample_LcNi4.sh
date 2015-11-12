@@ -12,7 +12,7 @@ INPUT_FILES=($INPUT_DIR/*.fastq.gz)
 
 FASTQ_FILE=${INPUT_FILES[$SLURM_ARRAY_TASK_ID]}
 OUTPUT_BASE=$(basename $FASTA_FILE)
-OUTPUT_CSV_FILE= ${OUTPUT_BASE}.mmap_results.csv
+OUTPUT_CSV_FILE=${OUTPUT_BASE}.mmap_results.csv
 OUTPUT_DIR=/data/sciencesupport/mmap/results/${OUTPUT_BASE}
 mkdir -p $OUTPUT_DIR
 
