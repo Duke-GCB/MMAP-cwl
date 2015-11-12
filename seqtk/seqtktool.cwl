@@ -2,6 +2,10 @@
 
 class: CommandLineTool
 
+hints:
+  - class: DockerRequirement
+    dockerImageId: 'dukegcb/seqtk'
+
 inputs:
   - id: "#input_fastq_file"
     type: File
