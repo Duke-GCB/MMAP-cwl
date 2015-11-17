@@ -11,9 +11,9 @@ BASEPATH="/winhomes/dcl9/mmap-bin/"
 ## seqtk
 export PATH="$BASEPATH/seqtk/bin:$PATH"
 
-## Genovo
+## Xgenovo
 # assemble and finalize
-export PATH="$BASEPATH/genovo-0.4:$PATH"
+export PATH="$BASEPATH/Xgenovo:$PATH"
 
 ## Glimmer
 # g3-iterated.csh
