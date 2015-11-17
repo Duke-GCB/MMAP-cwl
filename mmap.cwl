@@ -34,7 +34,7 @@ outputs:
 
 steps:
   - id: "#genovo"
-    run: { import: genovo/genovo.cwl }
+    run: { import: xgenovo/xgenovo.cwl }
     inputs:
     - { id: "#genovo.input_fasta_file", source: "#input_fasta_file" }
     outputs:

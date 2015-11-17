@@ -40,7 +40,7 @@ steps:
     outputs:
     - { id: "#fastq_to_fasta.output_fasta_file" }
   - id: "#genovo"
-    run: { import: genovo/genovo.cwl }
+    run: { import: xgenovo/xgenovo.cwl }
     inputs:
     - { id: "#genovo.input_fasta_file", source: "#fastq_to_fasta.output_fasta_file" }
     outputs:
