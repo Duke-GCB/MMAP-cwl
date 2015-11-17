@@ -8,9 +8,9 @@ echo "Starting MMAP for $FASTA_FILE, results in $OUTPUT_FILE"
 # All command-line binaries must be in PATH for CWL baseCommand to find them
 BASEPATH="/winhomes/dcl9/mmap-bin/"
 
-## Genovo
+## Xgenovo
 # assemble and finalize
-export PATH="$BASEPATH/genovo-0.4:$PATH"
+export PATH="$BASEPATH/Xgenovo:$PATH"
 
 ## Glimmer
 # g3-iterated.csh
