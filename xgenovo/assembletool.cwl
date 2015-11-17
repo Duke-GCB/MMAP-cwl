@@ -4,7 +4,7 @@ class: CommandLineTool
 
 hints:
   - class: DockerRequirement
-    dockerImageId: 'dukegcb/genovo'
+    dockerImageId: 'dukegcb/xgenovo'
 
 requirements:
   - class: CreateFileRequirement
