@@ -6,7 +6,7 @@ OUTPUT_FILE=$(basename $FASTA_FILE).mmap_results.csv
 echo "Starting MMAP for $FASTA_FILE, results in $OUTPUT_FILE"
 
 # All command-line binaries must be in PATH for CWL baseCommand to find them
-BASEPATH="/winhomes/dcl9/mmap-bin/"
+BASEPATH="/home/dcl9/mmap-bin/"
 
 ## Xgenovo
 # assemble and finalize
